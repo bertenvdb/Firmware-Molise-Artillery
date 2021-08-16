@@ -91,7 +91,7 @@
 /*** Section 1 Artillery Printer ***/
 
 //#define GENIUS
-//#define X1
+#define X1
 
 /*** Section 2 Board Type ***/
 
@@ -99,7 +99,7 @@
 //#define MKSGENLV21      // Choose this if you are using MKS GEN L V2.1
 //#define SKR13           // Choose this if you are using BigTreeTech SKR 1.3
 //#define SKR14           // Choose this if you are using BigTreeTech SKR 1.4
-//#define SKR14T          // Choose this if you are using BigTreeTech SKR 1.4 Turbo
+#define SKR14T            // Choose this if you are using BigTreeTech SKR 1.4 Turbo
 //#define MKSSGENLV1      // Choose this if you are using MKS SGEN L V1
 //#define MKSSGENLV2      // Choose this if you are using MKS SGEN L V2
 //#define MKSROBINNANOV3  // Choose this if you are using MKS ROBIN NANO V3
@@ -118,7 +118,7 @@
 
 /*** Section 3 Extruder Type ***/
 
-//#define TITAN       // Stock Extruder
+#define TITAN         // Stock Extruder
 //#define BMG         // Choose this if you are using BMG/BMG Wind
 //#define HEMERA      // Choose this if you are using HEMERA
 //#define MATRIX      // Choose this if you are using MATRIX
@@ -130,21 +130,21 @@
 //#define TMC_2209_STA    // Standalone Mode
 //#define LV_8729
 //#define TMC_2208        // UART Mode
-//#define TMC_2209        // UART Mode
+#define TMC_2209          // UART Mode
 
 /*** Section 5 Bed Leveling ***/
 
-//#define BLTOUCH      //uncomment if you use a BLTouch
+#define BLTOUCH        //uncomment if you use a BLTouch
   #ifdef BLTOUCH
     #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
     #define Z_MIN_PROBE_REPEATABILITY_TEST
-    #define NOZZLE_TO_PROBE_OFFSET { 28, -33, 0 }   //Offset preset for this fanduct : Sidewinder X1 Waggster Mod BLTouch with improved Fan Duct  by 3dprintbeginnercom on Thingiverse: https://www.thingiverse.com/thing:3972011
-  //#define NOZZLE_TO_PROBE_OFFSET { -17, -42, 0 }  //Offset preset for this fanduct with 5015 Fan on Thingiverse : https://www.thingiverse.com/thing:4741530
+    //#define NOZZLE_TO_PROBE_OFFSET { 28, -33, 0 } //Offset preset for this fanduct : Sidewinder X1 Waggster Mod BLTouch with improved Fan Duct  by 3dprintbeginnercom on Thingiverse: https://www.thingiverse.com/thing:3972011
+    #define NOZZLE_TO_PROBE_OFFSET { -17, -42, 0 }  //Offset preset for this fanduct with 5015 Fan on Thingiverse : https://www.thingiverse.com/thing:4741530
   //#define NOZZLE_TO_PROBE_OFFSET { 56, -34, 0 }   //Offset preset for this fanduct with 5015 Fan on Thingiverse : https://www.thingiverse.com/thing:4548854
   //#define NOZZLE_TO_PROBE_OFFSET { 36, -38, 0 }   //Offset preset for BMG Wind for this fanduct : Sidewinder X1 Waggster Mod BLTouch with improved Fan Duct  by 3dprintbeginnercom on Thingiverse: https://www.thingiverse.com/thing:3972011
-  #define WAGGSTER_MOD_WIRING                     //Comment if you don't use Waggster mode on Sidewinder (Guero Loco method by exemple) Mod needed for Genius standard wiring
+  #define WAGGSTER_MOD_WIRING                       //Comment if you don't use Waggster mode on Sidewinder (Guero Loco method by exemple) Mod needed for Genius standard wiring
   //#define Z_STEPPER_AUTO_ALIGN                    //Uncomment if you want to use Z_STEPPER_AUTO_ALIGN, be carefull, you need to remove the belt from the Z axes for this
-  //#define DISABLE_LED                             // Uncomment to disable LED, some users report compatibilty issues with BL Touch and LED enabled
+  #define DISABLE_LED                               // Uncomment to disable LED, some users report compatibilty issues with BL Touch and LED enabled
   #endif
 
 //#define ZMIN_SENSOR_AS_PROBE                      //uncomment to use Z min as Probe for bed leveling (incompatible with BLTouch)
